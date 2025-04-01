@@ -9,7 +9,8 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Cart from './pages/Cart';
 import Profile from './pages/Profile';
-import PrivateRoute from './components/routes/PrivateRoute';
+import Categories from './pages/Categories';
+import PrivateRoute from './components/auth/PrivateRoute';
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/categories" element={<Categories />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/cart" element={<Cart />} />
             <Route
               path="/profile"
               element={
